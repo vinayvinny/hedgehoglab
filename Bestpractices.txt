@@ -1,0 +1,5 @@
+I have developed a basic three-tier application using Dockerfiles and Docker Compose. To align with industry best practices, I have implemented the following measures in my daily activities:
+1. I integrate Snyk as a container image scanning tool in my daily workflow. It helps identify CVEs in both the base images and the application code. Critical vulnerabilities flagged by Snyk cause the Azure DevOps pipeline build to fail, enforcing secure builds.
+2. As Kubernetes is predominantly used in our environment, I store all application secrets in Azure Kubernetes Secret Store. This approach ensures that sensitive information is not exposed in Dockerfiles or Helm charts.
+3. To ensure high availability, I use KEDA in Kubernetes to automatically scale pods based on customer traffic. Additionally, node autoscaling is configured to handle fluctuating workloads effectively.
+4. For least privilege access, I utilize IAM roles in Elastic Kubernetes Service (EKS) to minimize security risks by ensuring that services and users have only the permissions they need.
